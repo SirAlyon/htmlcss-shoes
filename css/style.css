@@ -2,10 +2,15 @@
     margin: 0;padding: 0;box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Prompt', sans-serif;
     user-select: none;
 }
+
 /* Utility */
 
 .bg-red{
@@ -27,7 +32,6 @@ img{
 /* Inizio Main */
 
 .container{
-    width: 100%;
     height: 100vh;
     position: relative;
 }
@@ -44,23 +48,22 @@ img{
     text-align: center;
     font-size: 4rem;
     text-transform: uppercase;
-    padding: 0px 130px;
+    padding: 0px 100px;
     line-height: 60px;
     font-weight: bold;
+    word-spacing: 30px;
 }
 
 .bg-yellow p{
     color: green;
 }
 
-.bg-red a{
+.buttons a{
     text-decoration: none;
-    color: black;
-    
-    
+    color: black; 
 }
 
-.bg-red>.buttons span{
+.buttons a{
     display: inline-block;
     line-height: 35px;
     background-color: rgb(255, 255, 255); 
@@ -71,16 +74,21 @@ img{
     text-align: center;
     margin-left: 25px;
     font-weight: 900;
-    transition: transform .1s;
+    transition: transform .2s;
 }
 
 .buttons{
-    position: absolute;
+    position: fixed;
     top: 25px;
     right: 40px;
+    
 }
 
-.buttons span:hover{
+.buttons a:hover{
     transform: scale(1.2);
     font-size: 15px;
+}
+
+#site_main{
+    position: relative;
 }
